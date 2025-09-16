@@ -8,19 +8,20 @@ console.log(decors)
 function animaImgTextSobre(){
 
  const posicaoPrimeiro = decors[0].getBoundingClientRect() //pega posição do primeiro traço que compõem o svg 
+ const topoPrimeito = posicaoPrimeiro.top
  const basePrimeiro = posicaoPrimeiro.bottom //pega a base dele
 
     let atrasoAnima = 0
     decors.forEach((dec)=>{
         
-        if(basePrimeiro < window.innerHeight){
+        if( (topoPrimeito >=0 ) && (basePrimeiro < window.innerHeight)){
             // console.log('Base do elem passou pela tela')
                 setTimeout(()=>{
                 dec.style.fill = '#C5FFF6'
             }, 1000 + atrasoAnima)
             
         }
-       atrasoAnima+=100
+       atrasoAnima+=90
         
     })
     
