@@ -3,8 +3,17 @@ body,h1,h2,h3,h4,h5,p, ul{
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
+/* html{
+    max-width: 100%;
+} */
 body{
+    /* max-width: 100%; */
     position: relative;
+    top:0;
 }
 
 ul{
@@ -44,8 +53,6 @@ header .container-header, #inicio{
     border-radius: 10px;
     font-size: 0.875rem;
     letter-spacing: 0.5px;
-
-    /* border: 2px transparent */
 }
 
 
@@ -61,6 +68,9 @@ header{
     z-index: 5;
     top: 0;
     background-color: #fff;
+}
+.container-header{
+    max-width: 100%;
 }
 header img{
     max-width: 82px;
@@ -124,6 +134,10 @@ header nav ul{
     max-width: 30ch;
     margin-bottom: 14px;
     padding-right: 15px;
+/* animações */
+    animation: paraCima 0.6s 0.5s forwards ease-out;
+    opacity: 0;
+    transform: translate3d(0px,30px,0px);
 }
 #inicio h1 span, #inicio .inicio-infos span{
     color: #39A9A9;
@@ -138,7 +152,11 @@ header nav ul{
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     margin-bottom: 32px;
     max-width: 80%;
+/* animações */
+    animation: paraCima 0.6s 0.9s forwards ease-out;
+    opacity: 0;
 }
+
 #inicio .inicio-infos span{
     font-weight: 500;
 }
@@ -162,6 +180,7 @@ header nav ul{
     grid-column: 1;
     margin-top: 32px;
 }
+
 
 #sobre .quem-somos-infos p{
     margin-bottom: 30px;
@@ -203,6 +222,7 @@ color: black;
 }
 
 #formacao .forma-bg{
+    max-width: 100%;
     background-color: #012330;
     display: flex;
     justify-content: center;
@@ -381,6 +401,11 @@ color: black;
     max-width: 350px;
     position: relative;  
 }
+
+#formacao .bloco-anima{
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+}
 #formacao .tutores-infos a{
     padding: 12px 30px;
 }
@@ -406,6 +431,9 @@ color: black;
     width: 980px;
     max-width: 90%;
     margin: 0 auto;
+
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
 }
 
 #formacao .garantia-emprego div{
