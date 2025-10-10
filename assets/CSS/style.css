@@ -31,12 +31,22 @@ img{
     max-width: 100%;
 }
 
+.bg-nav{
+    display: block; 
+}
+
+header .container-header{
+    position: relative;
+}
 /*Estilos Gerais de Orientação e Tamanho dos containers*/
+
+
 header, header ul, header .container-header, #inicio{
     display: flex;
     justify-content: space-between;
 }
 header .container-header, #inicio{
+    max-width: 1152px;
     width: 80%;
     align-items: center;
 }
@@ -53,6 +63,7 @@ header .container-header, #inicio{
     border-radius: 10px;
     font-size: 0.875rem;
     letter-spacing: 0.5px;
+    display: inline-block;
 }
 
 
@@ -65,13 +76,13 @@ header{
     justify-content: center;
     border-bottom: 1px solid #E5E5E5;
     position: fixed;
-    z-index: 5;
+    z-index: 4;
     top: 0;
     background-color: #fff;
 }
-.container-header{
+/* .container-header{
     max-width: 100%;
-}
+} */
 header img{
     max-width: 82px;
 }
@@ -90,6 +101,11 @@ header nav ul{
     min-width: 300px;
 }
 
+#botao-menu{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
 
 /*Estilos Gerais Titulos*/
 #inicio h1, #sobre h2, #formacao h2, 
@@ -109,6 +125,11 @@ header nav ul{
 #inicio .container-img{
     border-radius: 40px;
     flex-basis: 400px;
+
+    /* animações */
+    animation: paraCima 0.6s 0.5s forwards ease-out;
+    opacity: 0;
+    transform: translate3d(0px,30px,0px);
 }
 #inicio .container-img p{
     width: 100%;
@@ -131,7 +152,7 @@ header nav ul{
     font-weight: 500;
     line-height: 1.3;
     letter-spacing: 1;
-    max-width: 30ch;
+    max-width: 28ch;
     margin-bottom: 14px;
     padding-right: 15px;
 /* animações */
@@ -160,6 +181,15 @@ header nav ul{
 #inicio .inicio-infos span{
     font-weight: 500;
 }
+/* #bg-menu-responsivo{
+    display: none;
+    background-color: #39a9a995;
+    height: 50vh;
+    width: 100vw;
+    z-index: 3;
+    position: fixed;
+    top:0
+} */
 
 
 /* REVISEI ESTILOS ATÉ AQUI */
@@ -197,6 +227,7 @@ header nav ul{
 /*FORMAÇÃO*/
 #formacao{
     margin-bottom: 150px;
+    width: 100%;
 }
 
 #formacao h2{
@@ -227,7 +258,7 @@ color: black;
     display: flex;
     justify-content: center;
     position: relative;  
-    z-index: 4;
+    z-index: 2;
 }
 #formacao .container-formacoes{
     display: grid;
@@ -409,6 +440,9 @@ color: black;
 #formacao .tutores-infos a{
     padding: 12px 30px;
 }
+#formacao .botao-comprar.ultimo{
+    display: none;
+}
 #formacao .container-tutores .tutores-infos .dec-barramento-top{
     position: absolute;
     left: 0;
@@ -466,6 +500,7 @@ color: black;
     background-color: #1A1A1A;
     color: #E5E5E5;
 }
+
 #contato h3, #contato h4{
     position: relative;
     font-size: 1.25rem;

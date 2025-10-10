@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Somos a NOVA - Tecnologia, formamos e empregamos os programadores do futuro">
-    <link rel="stylesheet" href="./assets/CSS/responsivo.css">
-    <link rel="stylesheet" href="./assets/CSS/animacoes.css">
     <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="./assets/CSS/animacoes.css">
+    <link rel="stylesheet" href="./assets/CSS/responsivo.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,15 +18,20 @@
     <header>
         <div class="container-header">
             <img src="./assets/img/_NOVA SVG.svg" alt="logo nova">
-            <nav>
-                <ul>
-                    <li><a href="#inicio">INICIO</a></li>
-                    <li><a href="#sobre">SOBRE</a></li>
-                    <li><a href="#formacao">FORMAÇÃO</a></li>
-                    <li><a href="#contato">CONTATO</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="botao-comprar">> COMPRAR AGORA</a>
+            <div class="bg-nav">
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">INICIO</a></li>
+                        <li><a href="#sobre">SOBRE</a></li>
+                        <li><a href="#formacao">FORMAÇÃO</a></li>
+                        <li><a href="#contato">CONTATO</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <button id="botao-menu"><span>></span>MENU</button>
+                <a href="#" class="botao-comprar">> COMPRAR AGORA</a>
+            </div>
         </div>
         
     </header>
@@ -184,6 +189,9 @@
                 <img src="./assets/img/tutores_foto.jpg" alt="tutores da nova">
             </div>
         </div>
+        
+        <a href="#" class="botao-comprar ultimo">> GARANTIR MINHA FORMAÇÃO HOJE</a>
+
 
         <div class="garantia-emprego">
             <div>
@@ -202,6 +210,7 @@
     </section>
 
     <footer id="contato">
+        
         <div class="redes-sociais">
             <h3>NOS MANDE UMA MENSAGEM E NOS SIGA NAS REDES SOCIAIS.</h3>
             <div class="links">

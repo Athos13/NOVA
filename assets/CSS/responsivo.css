@@ -1,10 +1,184 @@
-header .container-header, #inicio{
+/* header .container-header, #inicio{
     max-width: 80%;
+} */  
+
+.mostrar{
+    display: block;
 }
 
-/* @media(max-width:){
+.mostrarBgNav{
+    width: 100vw;
+    height: 100vh;
+     z-index: 8;
+}
 
-} */
-#formacao .container-formacoes{
 
+@media(max-width: 1080px){
+    header .container-header{
+        width: 90% !important;
+    }
+    #inicio h1{
+        font-size: 1.5rem !important;
+        margin-bottom: 20px !important;
+    }
+    #formacao h2 {
+        max-width: 80% !important;
+    }
+    #formacao .container-formacoes{
+        grid-template-columns: 1fr !important;
+    }
+    
+    #formacao .container-tutores .container-img img{
+        height: 318px !important;
+        object-fit: cover ; /* Garante que a imagem cubra a área */
+        object-position: center; /* Foca no centro da imagem */
+    }
+} 
+
+@media(max-width: 900px){
+    .container-img-decor{
+        display: none;
+    }
+    #inicio .container-img p {
+        font-size: 0.75rem;
+    }
+
+    header .botao-comprar{
+        font-size: 0.75rem;
+    }
+    #sobre{
+        grid-template-columns: 1fr !important;
+        margin-bottom: 72px;
+    }
+    #sobre h2{
+        margin-bottom: 20px;
+        font-size: 1.25rem;
+    }
+    #formacao{
+        margin-bottom: 0px;
+    }
+    #formacao .container-formacoes .lista li{
+        font-size: 0.75rem;
+    }
+    #formacao .container-formacoes .lista{
+        margin-bottom: 30px !important;
+        gap: 14px;
+        height: 120px;
+    }
+    #formacao h2, #formacao .container-tutores .tutores-infos h3{
+        font-size: 1.25rem !important;
+        text-align: center;
+    }
+    #formacao .container-tutores .tutores-infos p{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    /* #formacao .bloco-anima{
+        width: 100%;
+    } */
+    #formacao .container-tutores .tutores-infos .tutores-vantagens{
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    #formacao .tutores-infos{
+        margin-right: 0px !important;
+        min-width: 90% !important;
+    }
+    #formacao .tutores-infos a {
+        display: none;
+    }
+    #formacao .botao-comprar.ultimo{
+        /* max-width: 90%; */
+        width: 380px !important;
+        display: block !important;
+        margin: auto !important;
+    }
+    #formacao .container-tutores{
+        /* display: none !important; */
+        flex-direction: column;
+        padding-top: 80px ;
+        padding-bottom: 40px;
+    }
+    body #formacao .container-tutores .container-img{
+        width: 100% !important;
+        max-width: 80%;
+        height: 450px;
+        background-image: url('../img/tutores_foto.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        
+    }
+     #formacao .container-tutores .container-img img{
+        display: none;
+     }
+    .dec-barramento-top, .dec-barramento-bottom{
+        display: none;
+    }
+
+    #formacao .garantia-emprego{
+        grid-template-columns: 1fr;
+        padding: 80px 0;
+    }
+}
+
+@media(max-width:768px){
+    #botao-menu{
+        display: block;
+    }
+    header .container-header div{
+        display: flex;
+        align-items: center;
+    }
+    .bg-nav{
+        position: fixed;
+        top: 0;
+    }
+    header nav{
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 60px;
+        z-index: 10;
+        /* height: 500px; */
+        background-color: hsl(0, 9%, 98%);
+        border-radius: 0 0 10px 10px;
+    }
+    header nav ul{
+        height: 120px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px 0;
+    
+    }
+    header nav ul li{
+       /* padding: 5px 70px; */
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+    header nav ul li a{
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+    #inicio{
+        flex-direction: column;
+    }
+    #inicio h1{
+        max-width: 100% !important;
+        padding-right: 0;
+        text-align: center;
+    }
+    #inicio .inicio-infos p{
+        max-width: 100% !important;
+    }
+    #inicio .botao-comprar{
+        /* display: inline-block; */
+        display: block;
+        margin: auto;
+        
+    }
 }
