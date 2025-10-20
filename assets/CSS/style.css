@@ -1,4 +1,4 @@
-body,h1,h2,h3,h4,h5,p, ul{
+body,h1,h2,h3,h4,h5,p,ul,span{
     margin: 0;
     padding: 0;
 }
@@ -7,11 +7,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* html{
-    max-width: 100%;
-} */
 body{
-    /* max-width: 100%; */
     position: relative;
     top:0;
 }
@@ -38,9 +34,8 @@ img{
 header .container-header{
     position: relative;
 }
+
 /*Estilos Gerais de Orientação e Tamanho dos containers*/
-
-
 header, header ul, header .container-header, #inicio{
     display: flex;
     justify-content: space-between;
@@ -80,9 +75,7 @@ header{
     top: 0;
     background-color: #fff;
 }
-/* .container-header{
-    max-width: 100%;
-} */
+
 header img{
     max-width: 82px;
 }
@@ -105,8 +98,29 @@ header nav ul{
     display: none;
     position: relative;
     z-index: 10;
+    width: 50px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
 }
 
+#botao-menu div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao-menu span{
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+}
+#botao-menu span:nth-child(1){
+    margin-bottom: 8px;
+}
 /*Estilos Gerais Titulos*/
 #inicio h1, #sobre h2, #formacao h2, 
 #formacao .container-tutores .tutores-infos h3,
@@ -181,17 +195,13 @@ header nav ul{
 #inicio .inicio-infos span{
     font-weight: 500;
 }
-/* #bg-menu-responsivo{
-    display: none;
-    background-color: #39a9a995;
-    height: 50vh;
-    width: 100vw;
-    z-index: 3;
-    position: fixed;
-    top:0
-} */
 
 
+.botao-comprar:hover, .botao-comprar:focus{
+    animation: hoverBotao 0.1s 0.5s;
+    transition: ease-out 0.5s;
+    box-shadow: 0px 0px 0px 2px #39A9A9 inset, 0px 0px 1px 3px #9FF6ED;
+}
 /* REVISEI ESTILOS ATÉ AQUI */
 /*SOBRE*/
 #sobre{
@@ -289,9 +299,6 @@ color: black;
     font-size: 2rem;
     margin-left: 10px;
 }
-
-
-
 
 #formacao .item-formacao{
     /* max-width: 600px;
@@ -492,6 +499,36 @@ color: black;
     margin-top: 30px;
     font-weight: 300;
 } 
+
+
+
+
+
+
+
+#formacao .item-formacao:hover{
+    border: 3px solid transparent inset;
+
+    background: linear-gradient(#012330,#012330),
+    linear-gradient(to bottom, #1B8585, #72DEDB) border-box;
+    -webkit-background-clip: padding-box, border-box;
+    background-clip: padding-box, border-box;
+
+    box-shadow: 0 0 8px #0C595E;
+}
+
+#formacao .item-formacao a:hover{
+    animation: none;
+    background:linear-gradient(to bottom right, #012330, #0C595E);
+    box-shadow: 0px 0px 0px 1px #39A9A9 inset;
+    color: #FAF3FF;
+}
+
+
+
+
+
+
 
 #contato{
     display: flex;

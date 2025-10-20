@@ -4,14 +4,8 @@ const garantia = document.querySelector(".garantia-emprego")
 const botaoMenu = document.querySelector("#botao-menu")
 const nav = document.querySelector(".container-header nav")
 const containerHead = document.querySelector('.bg-nav')
+const tracosMenu = document.querySelector('#botao-menu div')
 
-// console.log(botaoMenu, nav)
-// nav.classList.add('mostrar')
-// decor.setAttribute('fill','#000000')
-// const contImg = document.querySelector('.container-img-decor')
-
-
-// console.log(decors)
 /*Checa se sessão Sobre está aparecendo na tela ao dar scroll, se sim adiciona animação*/
 function animaImgSobre(){
 
@@ -60,6 +54,7 @@ function removeBgNav(){
         // console.log('match')
         /* a viewport tem pelo menos 400 pixels de largura */
         containerHead.classList.remove('mostrarBgNav')
+        tracosMenu.style.transform = 'rotate(0deg)';
       } 
 }
  
@@ -69,8 +64,6 @@ function fechaMenuClickFora(e){
         nav.classList.remove('mostrar')
         containerHead.classList.remove('mostrarBgNav')
     }
-    // console.log(e.currentTarget)
-    // console.log(e.target)
 }
 
 
@@ -79,6 +72,13 @@ function toggleMenu(){
 
   nav.classList.toggle('mostrar')
   containerHead.classList.add('mostrarBgNav')
+  
+  if(nav.classList.contains('mostrar')){
+    tracosMenu.style.transform = 'rotate(90deg)';
+  }else{
+    tracosMenu.style.transform = 'rotate(0deg)';
+  }
+
 }
 
 
