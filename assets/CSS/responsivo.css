@@ -181,7 +181,9 @@
     #inicio .botao-comprar{
         display: block;
         margin: auto;
-        
+    }
+    .container-tutores .tutores-infos .tutores-vantagens li{
+        font-size: 1rem;
     }
     #contato .contato-infos{
         padding: 0 10px;
