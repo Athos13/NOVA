@@ -50,9 +50,8 @@ function animaTextoGarantia(){
 }
 
 function removeBgNav(){
+    // testa se tamanho da tela é mobile, se sim torna bg não clicavel e volta menu para posi padrão
     if(window.matchMedia("(min-width: 768px)").matches) {
-        // console.log('match')
-        /* a viewport tem pelo menos 400 pixels de largura */
         containerHead.classList.remove('mostrarBgNav')
         tracosMenu.style.transform = 'rotate(0deg)';
       } 
@@ -60,19 +59,25 @@ function removeBgNav(){
  
 
 function fechaMenuClickFora(e){
+// testa se estou clicando na fora da nav, se sim ... esconde ela, torna bg não clicavel e volta menu para posição padrão
     if(e.currentTarget === e.target){
         nav.classList.remove('mostrar')
         containerHead.classList.remove('mostrarBgNav')
+        tracosMenu.style.transform = 'rotate(0deg)';
+        
     }
 }
 
 
 function toggleMenu(){
+// add evento de clique no bg 
   containerHead.addEventListener('click', fechaMenuClickFora)
 
+// add class para tornar visivel a nav (display block) e clicavel o bg
   nav.classList.toggle('mostrar')
   containerHead.classList.add('mostrarBgNav')
-  
+
+//se nav já está a mostra coloca menu na posição de nav a mostra se não coloca na posi padrão 
   if(nav.classList.contains('mostrar')){
     tracosMenu.style.transform = 'rotate(90deg)';
   }else{
@@ -86,7 +91,8 @@ function toggleMenu(){
 document.addEventListener('scroll',animaImgSobre)
 document.addEventListener('scroll',animaTextoTutores)
 document.addEventListener('scroll',animaTextoGarantia)
-window.addEventListener('resize', removeBgNav)
+/** vai voltar o menu p posi padrão e bg não clicavel se tamanho for mobile  */
+window.addEventListener('resize', removeBgNav) 
 
 botaoMenu.addEventListener('click',toggleMenu)
 
