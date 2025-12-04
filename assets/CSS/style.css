@@ -61,10 +61,12 @@ header .container-header, #inicio{
     display: inline-block;
 }
 
-
+header .botao-comprar{
+    font-size: 0.75rem !important;
+}
 /*ESPECIFICO HEADER*/
 header{
-    height: 60px;
+    height: 40px;
     width: 100%;
     box-sizing: border-box;
     align-items: center;
@@ -133,7 +135,7 @@ header nav ul{
 
 /* ESPECIFICO INICIO*/
 #inicio{
-    margin: 150px auto;
+    margin: 100px auto;
     margin-bottom: 100px;
 }
 #inicio .container-img{
