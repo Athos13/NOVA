@@ -104,6 +104,7 @@ header nav ul{
     height: 30px;
     background-color: #fff;
     border: 1px solid #dcdcdc;
+    border-radius: 4px;
 }
 
 #botao-menu div{
@@ -546,6 +547,13 @@ color: black;
     text-align: center;
     color: #FFFFFF;
 }
+
+#contato h4{
+    margin-top: 8px;
+    font-size: 0.625rem;
+    /* font-weight: 200; */
+    color: #E5E5E5;
+}
 #contato .redes-sociais{
     display: flex;
     align-items: center;
@@ -559,9 +567,9 @@ color: black;
 }
 
 
-#contato div a:first-child{
+/* #contato div a:first-child{
     margin-right: 8px;
-}
+} */
 
 #contato .contato-infos{
     height: 400px;
@@ -573,6 +581,8 @@ color: black;
     font-size: 0.75rem;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
+
+
 #contato .contato-infos h5{
     font-weight: 600;
     font-size: 0.875rem;

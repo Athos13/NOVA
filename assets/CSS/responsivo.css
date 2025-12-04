@@ -42,7 +42,7 @@
     
     #sobre{
         grid-template-columns: 1fr !important;
-        margin-bottom: 72px;
+        margin-bottom: 40px;
     }
     #sobre h2{
         margin-bottom: 20px;
@@ -186,10 +186,29 @@
     #contato .contato-infos{
         padding: 0 10px;
     }
+    #contato h3{
+        text-align: start;
+    } 
+    #contato .redes-sociais{
+        width: 600px;
+    }
 }
 
 @media(max-width:500px){
     h1{
         text-align: left !important;
+    }
+    #contato{
+        min-height: 700px;
+    }
+    #contato .contato-infos{
+        gap: 60px 32px !important;
+        margin-top: 60px !important;
+    }
+    #contato h3{
+        font-size: 1rem;
+    }
+    #contato .links a{
+        max-width: 20px;
     }
 }
